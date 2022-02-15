@@ -6,12 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <title>Say援!</title>
 </head>
 <body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA4-u-SYNxoQqiz15CFgVkmk2JJCy2kNho",
+      authDomain: "sayen-a8208.firebaseapp.com",
+      projectId: "sayen-a8208",
+      storageBucket: "sayen-a8208.appspot.com",
+      messagingSenderId: "494437474617",
+      appId: "1:494437474617:web:6a1990ab1a9bed971608e8"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
   <div id="app">
     {{ message }}
     <button class="test" @click="kyoka">許可</button>
+    <button class="fire" @click="fire">fire</button>
   </div>
   <script src="main.js"></script>
 </body>
